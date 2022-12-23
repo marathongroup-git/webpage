@@ -1,0 +1,9 @@
+#root {
+  display: grid;
+  grid-template-rows: 40px 65px 1fr auto;
+  width: 100vw;
+
+  @media (max-width: 780px) {
+    grid-template-rows: 65px 1fr auto;
+  }
+}

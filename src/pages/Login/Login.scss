@@ -1,0 +1,106 @@
+.login {
+  width: 100%;
+  height: 100%;
+  margin: 0px 0 150px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__container {
+    height: 500px;
+    width: 800px;
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: rgba(69, 90, 100, 0.08) 0px 1px 20px 0px;
+    display: flex;
+    &__left {
+      width: 40%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      img {
+        width: 200px;
+      }
+    }
+    &__right {
+      box-sizing: border-box;
+      display: flex;
+      box-sizing: border-box;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 70%;
+      background-color: var(--dark);
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      & > form {
+        width: 70%;
+        h1 {
+          color: var(--white);
+        }
+
+        button {
+          margin-top: 1rem;
+          float: right;
+        }
+        label {
+          display: flex;
+          flex-direction: column;
+          & > span {
+            color: var(--white);
+            font-size: 12px;
+            padding-bottom: 0.5rem;
+            padding-top: 0.5rem;
+          }
+          & > input {
+            height: 30px;
+            max-width: 100%;
+            border-radius: 5px;
+            border: 1px solid var(--gray);
+
+            &:focus {
+              outline-color: var(--gray);
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 15px;
+      margin: 0 1rem;
+      box-shadow: var(--boxShadowHover);
+      height: auto;
+      &__right {
+        border-radius: 0;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        padding: 1rem;
+        width: 100%;
+        > form {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          > button {
+            margin-bottom: 2rem;
+          }
+        }
+
+      }
+      &__left{
+        width: 100%;
+        > img {
+          object-fit: contain;
+          height: 150px;
+          padding: 2rem 0;
+        }
+      }
+    }
+  }
+}

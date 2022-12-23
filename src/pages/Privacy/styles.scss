@@ -1,0 +1,23 @@
+.privacy {
+  display: grid;
+  grid-template-columns: 1fr minmax(375px, 1200px) 1fr;
+  grid-template-rows: auto auto auto;
+  width: 100vw;
+  &Container {
+    grid-column: 2;
+    margin: 50px 0;
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--boxShadow);
+    height: 90vh;
+    overflow-y: scroll;
+  }
+
+  @media (max-width: 600px) {
+    &Container{
+      height: 70vh;
+      margin: 20px 10px;
+    }
+  }
+}

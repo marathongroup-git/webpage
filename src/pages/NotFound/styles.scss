@@ -1,0 +1,29 @@
+.notFound {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-height: calc(100vh - 100px);
+  flex-direction: column;
+  text-align: center;
+  img {
+    object-fit: contain;
+  }
+  button {
+    width: 200px;
+    margin: 1rem auto;
+  }
+  h2 {
+    margin-top: -10px;
+    font-weight: 400;
+  }
+  @media(max-width: 780px){
+    img{
+      width: 80%;
+    }
+    h2 {
+      font-size: 16px;
+    }
+  }
+}

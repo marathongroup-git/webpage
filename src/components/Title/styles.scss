@@ -1,0 +1,21 @@
+.title {
+  font-size: 2rem;
+  line-height: 1.867;
+  color: var(--dark);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+
+  &.--center{
+    text-align: center;
+  }
+
+  &.--white{
+    color: var(--white);
+  }
+  &.--mid{
+    font-size: 1.5rem;
+  }
+  &.--small{
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,17 @@
+@import '../assets/styles/_variables.scss';
+@import '../assets/styles/_grid.scss';
+@import '../assets/styles/_normalize.scss';
+@import '../assets/styles/_animations.scss';
+
+body {
+  background-color: var(--background);
+}
+
+// eslint-disable-next-line
+.swiper-button-prev:after,
+.swiper-container-rtl .swiper-button-next:after,
+.swiper-button-next:after,
+.swiper-container-rtl .swiper-button-prev:after {
+  color: var(--gray);
+  font-size: 2rem;
+}

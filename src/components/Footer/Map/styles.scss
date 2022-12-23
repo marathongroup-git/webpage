@@ -1,0 +1,12 @@
+.map {
+  height: 100%;
+  width: 100%;
+}
+
+.pin{
+  height: 50px;
+  width: 50px;
+  object-position: center;
+  object-fit: contain;
+  transform: translate(-50%, -50%)
+}

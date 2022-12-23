@@ -1,0 +1,89 @@
+.brands {
+  grid-column: 2;
+  padding: 3rem 0;
+
+  @media (max-width: 600px) {
+    padding: 3rem 1rem;
+  }
+
+  &__card {
+    background-color: var(--white);
+    padding: 2rem 1rem;
+    height: 200px;
+    overflow: hidden;
+    -webkit-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 6px 6px 35px 0 rgba(0, 0, 0, 0.05);
+    -khtml-box-shadow: 6px 6px 35px 0 rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 6px 6px 35px 0 rgba(0, 0, 0, 0.05);
+    -ms-box-shadow: 6px 6px 35px 0 rgba(0, 0, 0, 0.05);
+    -o-box-shadow: 6px 6px 35px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 6px 6px 35px 0 rgba(0, 0, 0, 0.05);
+
+    &::after {
+      content: '';
+      height: 4px;
+      width: 0;
+      background-color: #d41e1c;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      transform-origin: left;
+      -moz-transform-origin: left;
+      -ms-transform-origin: left;
+      -webkit-transform-origin: left;
+      -o-transform-origin: left;
+      -webkit-transition: all 0.8s;
+      -khtml-transition: all 0.8s;
+      -moz-transition: all 0.8s;
+      -ms-transition: all 0.8s;
+      -o-transition: all 0.8s;
+      transition: all 0.8s;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+        left: 0;
+        right: auto;
+        transform-origin: right;
+        -moz-transform-origin: right;
+        -ms-transform-origin: right;
+        -webkit-transform-origin: right;
+        -o-transform-origin: right;
+      }
+    }
+    img {
+      width: 100%;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: center;
+      overflow-x: scroll;
+      height: 100px;
+
+      li {
+        cursor: pointer;
+        svg {
+          color: var(--primary);
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+.catalogo__patch {
+  color: #007dc0 !important;
+  &__link {
+    color: #007dc0 !important;
+  }
+}

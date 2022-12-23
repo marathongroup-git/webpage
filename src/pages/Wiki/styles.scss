@@ -1,0 +1,234 @@
+.wiki {
+  grid-column: 1;
+  display: grid;
+  grid-template-columns: 1fr minmax(375px, 1800px) 1fr;
+  grid-template-rows: auto auto auto;
+  width: 100%;
+  padding: 0 0 50px 0;
+
+  &__background {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &.text {
+      color: white;
+    }
+    padding: 1rem;
+  }
+  &Container {
+    padding-top: 50px;
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    gap: 25px;
+  }
+  &__entry {
+    display: flex;
+    margin-bottom: 35px;
+    img {
+      height: 250px;
+      width: 50%;
+      min-width: 50%;
+      object-fit: cover;
+    }
+  }
+  &__textBox {
+    margin: 0 15px;
+    text-overflow: ellipsis;
+    span {
+      color: var(--primary);
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    div {
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 5px;
+    }
+    button {
+      margin-top: auto;
+    }
+    p {
+      text-overflow: ellipsis;
+    }
+  }
+  &__divider {
+    margin: 0;
+    font-size: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    position: relative;
+    text-transform: uppercase;
+    &::after {
+      content: '';
+      background: #d41e1c;
+      width: 40px;
+      height: 2px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  &__input {
+    border: 1px solid var(--primary);
+    outline: none;
+    height: 30px;
+    width: 100%;
+    background-color: transparent;
+    margin-bottom: 25px;
+    padding-left: 15px;
+  }
+  &__entryBlog {
+    display: flex;
+    margin-bottom: 35px;
+    img {
+      height: 100px;
+      width: 50%;
+      min-width: 50%;
+      object-fit: cover;
+    }
+  }
+  &__textBoxBlog {
+    margin: 0 15px;
+    span {
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    div {
+      font-weight: bold;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+    button {
+      margin-top: auto;
+    }
+  }
+  &__month {
+    margin: 15px 0;
+  }
+  &__post {
+    padding: 15px 0;
+    box-sizing: border-box;
+    .parragraph {
+      border-bottom: 1px solid var(--light);
+      margin: 35px 0;
+      color: var(--gray);
+      padding-bottom: 25px;
+      text-align: justify;
+      img {
+        display: inline;
+        float: left;
+        margin-right: 20px;
+        height: 100%;
+      }
+      &:nth-of-type(2n) {
+        flex-direction: row-reverse;
+        img {
+          float: right;
+          margin-left: 20px;
+        }
+      }
+    }
+    img {
+      object-fit: cover;
+      height: 250px;
+      width: 30%;
+      display: inline;
+      margin-right: 15px;
+    }
+  }
+  &__commnets {
+    textarea {
+      width: 100%;
+      height: 200px;
+      border: 1px solid var(--primary);
+      outline: none;
+      background-color: transparent;
+      padding-left: 15px;
+      margin: 10px 0 10px 0;
+      box-sizing: border-box;
+    }
+    input {
+      border: 1px solid var(--primary);
+      outline: none;
+      height: 30px;
+      width: 30%;
+      background-color: transparent;
+      padding-left: 15px;
+      margin: 10px 0 10px 0;
+    }
+    width: 100%;
+  }
+  &__file {
+    display: block;
+    margin-top: 100px;
+  }
+  &__inputsGroup {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__banner {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+  }
+
+
+  h1, p {
+  font-family: Lato;
+}
+body{
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.container {
+    display: grid;   
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 50px 510px 100px;
+    grid-template-areas:
+        ". h h h ."
+        ". c c c ."
+        ". f f f .";
+
+}
+.header {
+  grid-area: h;
+  background: #34495e;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+}
+.header text{
+  font-size: 25px;
+  color:#fff;
+
+}
+.content {
+    background: white;
+    grid-area: c;
+    overflow-y: scroll;
+
+}
+.footer {
+  background: #34495e;
+   grid-area: f;
+}
+.fullheight{
+  height: 90vh;
+ display: inline-block;
+ margin: 0 auto;
+ 
+}
+}
